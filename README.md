@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+Aqui está um README atualizado que inclui a explicação para o novo componente `Details`:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+```markdown
+# Movie App
 
-## Available Scripts
+Este é um aplicativo de filmes que consome a API do The Movie Database (TMDb) para exibir uma lista de filmes populares. Os usuários podem clicar em um filme para ver mais detalhes.
 
-In the project directory, you can run:
+## Funcionalidades
 
-### `npm start`
+- Exibir uma lista de filmes populares.
+- Permitir que os usuários cliquem em um filme para ver mais detalhes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Tecnologias Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- React Router
+- TMDb API
 
-### `npm test`
+## Instalação
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Siga estas etapas para configurar o projeto localmente:
 
-### `npm run build`
+1. Clone o repositório:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/seu-usuario/movie-app.git
+   cd movie-app
+   ```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Instale as dependências:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Inicie o servidor de desenvolvimento:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+O aplicativo deve estar rodando em [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Uso
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Acesse a página inicial para ver uma lista de filmes populares. Clique em um filme para ver mais detalhes.
 
-## Learn More
+### Explicação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### Componente Home
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Imports**: Importa os componentes de estilo (`Container`, `MovieList`, `Movie`), hooks do React (`useState`, `useEffect`), e `Link` do React Router.
+- **Estado e Efeito**: Usa `useState` para armazenar a lista de filmes e `useEffect` para buscar os filmes populares na API do TMDb quando o componente é montado.
+- **Renderização**: Mapeia a lista de filmes para exibir cada filme como um item clicável. Cada item contém um link para a página de detalhes do filme e exibe a imagem do poster do filme.
 
-### Code Splitting
+#### Componente Details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Imports**: Importa hooks do React (`useState`, `useEffect`), `Link` e `useParams` do React Router, e `Container` do estilo.
+- **Estado e Efeito**: Usa `useState` para armazenar os detalhes do filme e `useEffect` para buscar os detalhes do filme na API do TMDb quando o componente é montado ou o id do filme muda.
+- **Renderização**: Exibe os detalhes do filme, incluindo a imagem do poster, título, sinopse e data de lançamento. Inclui um botão para voltar à página inicial.
 
-### Analyzing the Bundle Size
+## Contribuição
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Se você quiser contribuir para este projeto, por favor, abra uma issue ou envie um pull request.
 
-### Making a Progressive Web App
+## Licença
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+```
 
-### Advanced Configuration
+### Instruções Adicionais
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. **Substitua `seu-usuario` na URL do repositório pelo nome de usuário do GitHub que você está usando.
+2. **Garanta que a chave de API (`APIKey`) esteja corretamente configurada no arquivo `../../config/key`.
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este README deve fornecer uma base sólida para os usuários e desenvolvedores que desejam entender e colaborar com seu projeto.
